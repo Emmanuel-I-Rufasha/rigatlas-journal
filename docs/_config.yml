@@ -2,13 +2,17 @@ title: RigAtlas Journal
 description: A transparent engineering journal documenting the build of RigAtlas.
 markdown: kramdown
 
-# Keep URLs stable + clean
+# Keeps my URLs stable and clean
 permalink: pretty
 
 # GitHub Pages safe settings
 theme: minima
 
-# Navigation (we’ll render this ourselves in the layout)
+# Base URL so my CSS file is properly referenced
+url: "https://emmanuel-i-rufasha.github.io"
+baseurl: "/rigatlas-journal"
+
+# Navigation (I’ll render this myself in the layout)
 nav:
   - title: Journal
     url: /
