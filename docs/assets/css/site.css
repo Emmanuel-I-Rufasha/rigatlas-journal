@@ -1,0 +1,271 @@
+:root {
+  --bg: #0b0f14;
+  --card: #0f1620;
+  --text: #e6edf3;
+  --muted: #9fb0c0;
+  --border: rgba(230, 237, 243, 0.12);
+  --link: #7cc4ff;
+  --max: 980px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  background: rgba(11, 15, 20, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--muted);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+}
+
+.content {
+  padding: 28px 18px 52px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+h1 { font-size: 34px; margin: 0 0 14px; }
+h2 { font-size: 22px; margin-top: 28px; }
+h3 { font-size: 18px; margin-top: 22px; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 22px 0;
+}
+
+ul { padding-left: 18px; }
+li { margin: 8px 0; }
+
+code {
+  background: rgba(255,255,255,0.06);
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+pre {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+blockquote {
+  margin: 18px 0;
+  padding: 10px 14px;
+  border-left: 3px solid rgba(124,196,255,0.55);
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+  color: var(--muted);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ===== Timeline (Status page) ===== */
+
+.timeline-wrap {
+  margin-top: 18px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 18px;
+}
+
+#ra-timeline {
+  position: relative;
+  padding: 18px 0;
+  margin: 0;
+}
+
+#ra-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  height: 100%;
+  width: 4px;
+  background: rgba(124, 196, 255, 0.35);
+  border-radius: 999px;
+}
+
+.ra-block {
+  position: relative;
+  margin: 22px 0;
+}
+.ra-block:after { content:""; display: table; clear: both; }
+
+.ra-dot {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 3px solid rgba(124, 196, 255, 0.7);
+  background: rgba(124, 196, 255, 0.18);
+}
+
+.ra-card {
+  margin-left: 60px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 14px;
+}
+
+.ra-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.ra-card { max-width: 520px; }
+
+
+.ra-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.ra-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.2);
+  color: var(--text);
+}
+
+.ra-badge i { opacity: 0.9; }
+
+.ra-desc {
+  color: rgba(230, 237, 243, 0.88);
+  margin: 10px 0 0;
+}
+
+.ra-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(230, 237, 243, 0.88);
+}
+
+.ra-status-active .ra-dot {
+  border-color: rgba(140, 97, 255, 0.9);
+  background: rgba(140, 97, 255, 0.25);
+}
+.ra-status-active .ra-badge.status {
+  border-color: rgba(140, 97, 255, 0.5);
+}
+
+.ra-status-done .ra-dot {
+  border-color: rgba(92, 211, 140, 0.9);
+  background: rgba(92, 211, 140, 0.22);
+}
+.ra-status-done .ra-badge.status {
+  border-color: rgba(92, 211, 140, 0.5);
+}
+
+.ra-status-planned .ra-dot {
+  border-color: rgba(255, 199, 92, 0.9);
+  background: rgba(255, 199, 92, 0.18);
+}
+.ra-status-planned .ra-badge.status {
+  border-color: rgba(255, 199, 92, 0.5);
+}
+
+/* Desktop split layout (like the CodePen vibe) */
+@media (min-width: 1100px) {
+  #ra-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+
+  .ra-dot {
+    left: 50%;
+    margin-left: -13px;
+  }
+
+  .ra-card {
+    width: 40%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+  }
+
+  .ra-block:nth-child(odd) .ra-card {
+    margin-left: 5%;
+  }
+
+  .ra-block:nth-child(even) .ra-card {
+    float: right;
+    margin-right: 5%;
+  }
+}

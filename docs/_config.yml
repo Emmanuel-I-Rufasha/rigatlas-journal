@@ -1,0 +1,18 @@
+title: RigAtlas Journal
+description: A transparent engineering journal documenting the build of RigAtlas.
+markdown: kramdown
+
+# Keep URLs stable + clean
+permalink: pretty
+
+# GitHub Pages safe settings
+theme: minima
+
+# Navigation (we’ll render this ourselves in the layout)
+nav:
+  - title: Journal
+    url: /
+  - title: Logs
+    url: /#logs
+  - title: Status
+    url: /status/
