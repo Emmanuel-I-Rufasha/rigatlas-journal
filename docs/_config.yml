@@ -16,8 +16,6 @@ baseurl: "/rigatlas-journal"
 nav:
   - title: Journal
     url: /
-  - title: Logs
-    url: /#logs
   - title: Status
     url: /status/
 
