@@ -17,9 +17,9 @@ nav:
   - title: JOURNAL
     url: / 
   - title: PROBLEM DEFINITION
-    url: /problem/
+    url: /problem/ 
   - title: SOLUTION
-    url: /solution/
+    url: /solution/ 
   - title: CURRENT STATUS
     url: /status/
 
