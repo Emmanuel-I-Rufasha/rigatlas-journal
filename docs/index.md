@@ -17,5 +17,6 @@ Entries capture:
 ## Logs
 <a id="logs"></a>
 
+- [21-01-2026 : Researching Piping & Instrumental Diagrams(P&ID)](logs/2026-01-21.md)
 - [18-01-2026 : Researching the Purdue Model](logs/2026-01-18.md)
 - [17-01-2026 : Revising All 8 Epics & Their Features](logs/2026-01-17.md)

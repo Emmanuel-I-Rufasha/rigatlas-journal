@@ -70,9 +70,11 @@ This page shows the high-level lifecycle of RigAtlas — from early research and
           <li>Written Features for each Epic</li>
           <li>Continuously refining scope as domain understanding improves</li>
           <li>Planning is still ongoing — Stories and task estimation are not complete yet</li>
-        </ul>
-
-        <p class="ra-desc"><strong>Epics defined so far:</strong></p>
+        </ul></br>
+        
+        <p class="ra-desc">
+            <strong>Epics defined so far:</strong>
+        </p>
         <ol class="ra-list">
           <li>Platform Foundation, Architecture & Development Setup</li>
           <li>Asset Inventory Core</li>
